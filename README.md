@@ -11,28 +11,85 @@ dans le cadre des **Olympiades de Sciences de l’Ingénieur**
 
 ## Innovation & Ville du Futur
 
-Ce projet explore la création d’un mobilier urbain intelligent intégré dans une logique de **Smart City**, combinant :
+Ce projet s’inscrit dans une vision de **Smart City durable**, combinant :
 
-- écologie urbaine
-- automatisation
-- IoT
+- innovation urbaine
+- IoT et systèmes embarqués
 - agriculture hydroponique
-- gestion énergétique intelligente
+- énergie renouvelable
+- automatisation intelligente
 
 ---
 
 # 📌 Présentation du projet
 
-**Verti-Garden Bench** est un banc urbain intelligent capable de :
+**Verti-Garden Bench** est un banc urbain intelligent et autonome capable de :
 
-- gérer deux systèmes hydroponiques indépendants
-- s’adapter automatiquement à la météo
+- gérer 2 systèmes hydroponiques indépendants
+- surveiller la météo en temps réel
+- s’adapter automatiquement aux conditions environnementales
 - contrôler un store motorisé
 - gérer un éclairage intelligent
 - activer une ventilation automatique
-- surveiller l’environnement en temps réel
+- fonctionner en autonomie énergétique
 - être contrôlé via une interface web
 - offrir un mode technicien sécurisé
+
+---
+
+# ⚡ Système énergétique (AUTONOMIE)
+
+Le banc est totalement autonome grâce à un système énergétique hybride :
+
+## 🔋 Batteries
+- 2 batteries **12V**
+- stockage principal de l’énergie
+- alimentation du système en continu
+
+---
+
+## ☀️ Panneau solaire
+- recharge des batteries en journée
+- production d’énergie renouvelable
+- fonctionnement indépendant du réseau électrique
+
+---
+
+## ⚙️ MPPT (Maximum Power Point Tracking)
+Le contrôleur MPPT optimise la charge solaire :
+
+- maximise la puissance du panneau solaire
+- adapte tension et courant en temps réel
+- améliore le rendement énergétique
+- protège les batteries
+
+---
+
+## 🔌 Régulateur de charge
+Le régulateur assure :
+
+- protection contre surcharge
+- protection contre décharge profonde
+- stabilisation de la tension
+- distribution sécurisée de l’énergie
+
+---
+
+## 🔄 Fonctionnement global énergie
+
+1. Le **panneau solaire** capte l’énergie solaire  
+2. Le **MPPT optimise la production électrique**  
+3. L’énergie est envoyée au **régulateur de charge**  
+4. Les **2 batteries 12V sont chargées**  
+5. Les batteries alimentent :
+   - ESP32
+   - pompes hydroponiques
+   - moteur du store
+   - LEDs
+   - ventilateur
+   - capteurs
+
+👉 Le système fonctionne **24h/24 en autonomie complète**
 
 ---
 
@@ -41,39 +98,36 @@ Ce projet explore la création d’un mobilier urbain intelligent intégré dans
 Le système repose sur :
 
 - 2 ESP32 connectés
-- des capteurs environnementaux
-- une interface web locale
-- une communication sans fil ESP-NOW
+- capteurs environnementaux
+- communication ESP-NOW
+- serveur web local
+- gestion énergétique autonome
 
 ---
 
 # 📡 Protocoles utilisés
 
 ## ESP-NOW
-Communication directe entre les 2 ESP32 :
+Communication directe entre ESP32 :
+- contrôle pompe secondaire
 - faible latence
-- sans WiFi externe
-- contrôle de la pompe secondaire
+- sans internet
 
-## WiFi (Access Point)
-Création d’un réseau local :
-- accès au site web
-- contrôle utilisateur
-- mode technicien
+## Wi-Fi (Access Point)
+- réseau local du banc
+- accès smartphone/PC
+- interface web
 
 ## HTTP REST API
-Permet :
-- lecture des capteurs
-- contrôle du système
-- communication interface ↔ ESP32
+- lecture capteurs
+- contrôle système
+- dashboard
 
 ## I2C
-Utilisé pour le capteur :
-- température
-- pression (BMP280)
+- communication capteur BMP280
+- température / pression
 
 ## PWM
-Utilisé pour :
 - moteur du store
 - pompes
 - intensité LED
@@ -83,39 +137,34 @@ Utilisé pour :
 # 🧩 Composants principaux
 
 ## 🌧 Capteur de pluie
-Détecte :
-- pluie faible
-- pluie forte
-→ déclenche la fermeture du store
+- détecte pluie faible/forte
+- déclenche fermeture automatique
 
 ## 🌬 Capteur de vent
-Mesure la vitesse du vent :
-→ protection automatique du système
+- mesure vitesse du vent
+- sécurité du système
 
 ## 🌡 BMP280
-Mesure :
 - température
 - pression atmosphérique
 
 ## 🌞 LDR
-Détecte la luminosité :
-→ contrôle automatique des LEDs
+- jour / nuit
+- contrôle automatique LEDs
 
-## 🪴 Système hydroponique x2
-Chaque système contient :
-- une pompe indépendante
-- un cycle automatique
-- un contrôle séparé
+## 🪴 Hydroponie x2
+- 2 systèmes indépendants
+- 2 pompes séparées
+- cycles automatiques
 
 ## 🔆 LEDs WS2812B
-- éclairage automatique de nuit
-- extinction automatique de jour
+- éclairage nocturne automatique
 
 ## 💨 Ventilateur
-- régulation thermique automatique
+- régulation thermique
 
 ## 💧 Humidificateur
-- améliore les conditions de croissance
+- amélioration croissance plantes
 
 ## 🪟 Store motorisé
 - ouverture/fermeture automatique selon météo
@@ -125,32 +174,34 @@ Chaque système contient :
 # 🌐 Interface Web
 
 ## Mode utilisateur
-- visualisation des capteurs
-- contrôle du système
-- suivi temps réel
+- météo temps réel
+- état du système
+- contrôle basique
 
 ## Mode technicien
 - contrôle complet
-- réglage des pompes
-- configuration moteur
+- réglage pompes
+- moteur
 - maintenance système
+- monitoring avancé
 
 ---
 
-# ⚙️ Architecture
+# ⚙️ Architecture système
 
-- ESP32 Master : contrôle principal
-- ESP32 Slave : gestion hydroponie 2
+- ESP32 Master → contrôle principal
+- ESP32 Slave → hydroponie 2
 - communication ESP-NOW
 - serveur web embarqué
+- alimentation autonome solaire
 
 ---
 
-# 🔐 Accès code complet
+# 🔐 Code complet
 
-⚠️ Le code présenté ici est une version simplifiée.
+⚠️ Ce dépôt contient une version simplifiée du projet.
 
-Le **code complet du projet** est disponible uniquement sur demande.
+Le **code complet (firmware + architecture complète + logique avancée)** est disponible uniquement sur demande.
 
 📧 Contact :
 **ARYAN KUMAR**  
@@ -162,3 +213,5 @@ Le **code complet du projet** est disponible uniquement sur demande.
 
 Projet réalisé par les élèves du **Lycée Paul Le Rolland**  
 dans le cadre des **Olympiades de Sciences de l’Ingénieur**
+
+---
