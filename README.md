@@ -6,6 +6,20 @@ Projet développé par les élèves du **Lycée Paul Le Rolland**
 dans le cadre des **Olympiades de Sciences de l’Ingénieur**
 
 ---
+## 🏆 Mise à jour — Lauréats académiques
+
+Nous sommes fiers d’annoncer que **Verti Garden Bench** a remporté les **Olympiades académiques de Sciences de l’Ingénieur**.
+
+Après plusieurs mois de travail, de conception, de tests et d’améliorations, notre projet a été sélectionné comme **lauréat au niveau académique**. Cette victoire représente une grande étape pour notre équipe et valorise notre travail autour de l’innovation, de l’écologie et de la ville de demain.
+
+Grâce à cette réussite, **Verti Garden Bench** participera à la **finale nationale des Olympiades de Sciences de l’Ingénieur**, avec la présence d’équipes internationales invitées venant de plusieurs pays, notamment la **Chine**, l’**Inde** et l’**Allemagne**.
+
+Notre objectif reste le même : montrer comment un simple banc peut devenir une solution **intelligente, écologique et sociale** pour améliorer les espaces urbains et rendre les villes plus vertes, plus connectées et plus humaines.
+
+Merci à toutes les personnes qui nous soutiennent depuis le début.  
+L’aventure continue 🌱🚀
+
+---
 
 # 🎯 Thème du concours
 
@@ -215,3 +229,5 @@ Projet réalisé par les élèves du **Lycée Paul Le Rolland**
 dans le cadre des **Olympiades de Sciences de l’Ingénieur**
 
 ---
+
+
