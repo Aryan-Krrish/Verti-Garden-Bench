@@ -18,7 +18,37 @@ Notre objectif reste le même : montrer comment un simple banc peut devenir une 
 
 Merci à toutes les personnes qui nous soutiennent depuis le début.  
 L’aventure continue 🌱🚀
+---
+## 🚀 Nouvelle mise à jour — Améliorations du projet
 
+Après notre sélection comme **lauréats académiques des Olympiades de Sciences de l’Ingénieur**, nous avons continué à faire évoluer **Verti Garden Bench** avec de nouvelles fonctionnalités innovantes.
+
+Notre objectif est d’aller plus loin qu’un simple banc intelligent : nous voulons créer une vraie expérience autour de la nature, du bien-être et de la ville du futur.
+
+### 🌱 Verti Care IA
+
+**Verti Care IA** est une nouvelle amélioration du projet dédiée à la santé des plantes.
+
+Ce système utilise une caméra et de l’intelligence artificielle pour analyser l’état des feuilles et détecter certains problèmes comme :
+
+- les maladies des plantes ;
+- le stress hydrique ;
+- les carences nutritionnelles ;
+- les signes de mauvaise croissance.
+
+L’objectif est d’aider le technicien ou l’utilisateur d’un banc privé à mieux comprendre l’état des plantes et à faciliter leur entretien.
+
+### 🎧 Téléportation des sensations
+
+**Téléportation des sensations** est une autre innovation ajoutée au projet.
+
+Ce système combine des **odeurs naturelles** et une **ambiance sonore relaxante** pour créer une expérience plus calme et immersive. L’idée est de réduire le stress, le bruit et la sensation de pollution en ville, en donnant à l’utilisateur l’impression d’être transporté dans un environnement naturel, comme un jardin ou une forêt.
+
+### 🌍 Une vision plus complète
+
+Avec ces nouvelles améliorations, **Verti Garden Bench** devient plus qu’un banc écologique : c’est un espace intelligent, social et sensoriel, pensé pour améliorer le bien-être des utilisateurs tout en apportant plus de nature dans les villes.
+
+L’aventure continue 🌱🚀
 ---
 
 # 🎯 Thème du concours
